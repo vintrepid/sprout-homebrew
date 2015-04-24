@@ -2,6 +2,16 @@
 # to install (e.g. pstree, htop)
 include_recipe "homebrew"
 
+directory '/usr/local/Library/Taps' do
+  owner node['sprout']['user']
+  recursive true
+end
+
+execute 'tap cask' do
+  command 'brew tap "homebrew/dupes"'
+  user node['sprout']['user']
+end
+
 node['sprout']['homebrew']['formulae'].each do |formula|
   Chef::Log::warn("Doing homebrew formula #{formula}")
 
