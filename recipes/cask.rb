@@ -7,6 +7,10 @@ end
 
 execute 'tap cask' do
   command 'brew tap "phinze/cask"'
+  user node['sprout']['user']
+end
+
+execute 'tap cask versions' do
   command 'brew tap "caskroom/versions"'
   user node['sprout']['user']
 end
