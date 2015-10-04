@@ -1,0 +1,40 @@
+Generated at 2015-10-04 10:56:00 -0700
+TapFormulaAmbiguityError: package[brew-cask] (sprout-homebrew::cask line 18) had an error: TapFormulaAmbiguityError: Formulae found in multiple taps: 
+ * caskroom/cask/brew-cask
+ * phinze/cask/brew-cask
+
+Please use the fully-qualified name e.g. caskroom/cask/brew-cask to refer the formula.
+
+/usr/local/Library/Homebrew/formulary.rb:288:in `loader_for'
+/usr/local/Library/Homebrew/formulary.rb:205:in `factory'
+/usr/local/Library/Homebrew/formula.rb:1039:in `[]'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/cookbooks/homebrew/libraries/homebrew_package.rb:97:in `get_version_from_formula'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/cookbooks/homebrew/libraries/homebrew_package.rb:74:in `current_installed_version'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/cookbooks/homebrew/libraries/homebrew_package.rb:44:in `load_current_resource'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/provider.rb:97:in `run_action'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/resource.rb:625:in `run_action'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/runner.rb:49:in `run_action'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/runner.rb:81:in `block (2 levels) in converge'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/runner.rb:81:in `each'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/runner.rb:81:in `block in converge'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/resource_collection.rb:98:in `block in execute_each_resource'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/resource_collection/stepable_iterator.rb:116:in `call'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/resource_collection/stepable_iterator.rb:116:in `call_iterator_block'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/resource_collection/stepable_iterator.rb:104:in `iterate'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/resource_collection.rb:96:in `execute_each_resource'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/runner.rb:80:in `converge'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/client.rb:429:in `converge'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/client.rb:494:in `do_run'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/client.rb:199:in `block in run'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/client.rb:193:in `fork'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/client.rb:193:in `run'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/application.rb:183:in `run_chef_client'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/application/solo.rb:239:in `block in run_application'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/application/solo.rb:231:in `loop'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/application/solo.rb:231:in `run_application'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/lib/chef/application.rb:66:in `run'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/gems/chef-11.6.0/bin/chef-solo:25:in `<top (required)>'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/bin/chef-solo:23:in `load'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/vendor/bundle/bin/chef-solo:23:in `<main>'

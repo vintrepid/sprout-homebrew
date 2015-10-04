@@ -15,7 +15,7 @@ execute 'tap cask versions' do
   user node['sprout']['user']
 end
 
-package 'brew-cask'
+package 'caskroom/cask/brew-cask'
 
 package 'brew-cask' do
   action :upgrade

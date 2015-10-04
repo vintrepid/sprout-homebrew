@@ -1,0 +1,59 @@
+  * execute[tap cask versions] action run[2015-10-04T10:56:00-07:00] INFO: Processing execute[tap cask versions] action run (sprout-homebrew::cask line 13)
+[2015-10-04T10:56:00-07:00] INFO: execute[tap cask versions] ran successfully
+
+    - execute brew tap "caskroom/versions"
+
+  * package[brew-cask] action install[2015-10-04T10:56:00-07:00] INFO: Processing package[brew-cask] action install (sprout-homebrew::cask line 18)
+
+================================================================================
+Error executing action `install` on resource 'package[brew-cask]'
+================================================================================
+
+
+TapFormulaAmbiguityError
+------------------------
+Formulae found in multiple taps: 
+ * caskroom/cask/brew-cask
+ * phinze/cask/brew-cask
+
+Please use the fully-qualified name e.g. caskroom/cask/brew-cask to refer the formula.
+
+
+
+Cookbook Trace:
+---------------
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/cookbooks/homebrew/libraries/homebrew_package.rb:97:in `get_version_from_formula'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/cookbooks/homebrew/libraries/homebrew_package.rb:74:in `current_installed_version'
+/Users/vintrepid/dev/ops/sprout/sprout-wrap/cookbooks/homebrew/libraries/homebrew_package.rb:44:in `load_current_resource'
+
+
+Resource Declaration:
+---------------------
+# In /Users/vintrepid/dev/ops/sprout/sprout-wrap/cookbooks/sprout-homebrew/recipes/cask.rb
+
+ 18: package 'brew-cask'
+ 19: 
+
+
+
+Compiled Resource:
+------------------
+# Declared in /Users/vintrepid/dev/ops/sprout/sprout-wrap/cookbooks/sprout-homebrew/recipes/cask.rb:18:in `from_file'
+
+package("brew-cask") do
+  action :install
+  retries 0
+  retry_delay 2
+  package_name "brew-cask"
+  cookbook_name :"sprout-homebrew"
+  recipe_name "cask"
+end
+
+
+
+[2015-10-04T10:56:00-07:00] INFO: Running queued delayed notifications before re-raising exception
+[2015-10-04T10:56:00-07:00] ERROR: Running exception handlers
+[2015-10-04T10:56:00-07:00] ERROR: Exception handlers complete
+[2015-10-04T10:56:00-07:00] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+Chef Client failed. 12 resources updated
+[2015-10-04T10:56:00-07:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
